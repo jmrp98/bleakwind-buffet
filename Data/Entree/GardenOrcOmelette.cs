@@ -1,4 +1,10 @@
-﻿using System;
+﻿/*
+ * Author: Jose Mateus Raitz
+ * Class name: GardenOrcOmelete.cs
+ * Purpose: Class used to represent a Garden Orc Omellete
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Text;
 

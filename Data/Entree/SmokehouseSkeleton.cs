@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * Author: Jose Mateus Raitz
+ * Class name: SmokehouseSkeleton.cs
+ * Purpose: Class used to represent a Smokehouse Skeleton
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 

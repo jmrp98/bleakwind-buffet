@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * Author: Jose Mateus Raitz
+ * Class name: PhillyPoacher.cs
+ * Purpose: Class used to represent a Philly Poacher
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 
