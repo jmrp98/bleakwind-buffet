@@ -1,5 +1,11 @@
-﻿using BleakwindBuffet.Data.Enums;
-using Data.Enums;
+﻿/*
+ * Author: Jose Mateus Raitz
+ * Class name: SailorSoda.cs
+ * Purpose: Class used to represent a Sailor Soda
+ */
+
+using BleakwindBuffet.Data.Enums;
+
 using System;
 using System.Collections.Generic;
 using System.Drawing;

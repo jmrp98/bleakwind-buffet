@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Data.Entree
+namespace BleakwindBuffet.Data.Entree
 {
     public class ThalmorTriple
     {

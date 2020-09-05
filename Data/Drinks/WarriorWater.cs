@@ -1,10 +1,15 @@
-﻿using System;
+﻿/*
+ * Author: Jose Mateus Raitz
+ * Class name: WarriorWater.cs
+ * Purpose: Class used to represent a WarriorWater
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace BleakwindBuffet.Data.Drinks
 {
-    class WarriorWater
+    public class WarriorWater
     {
         /// <summary>
         /// Gets the size of drink.

@@ -1,10 +1,15 @@
-﻿using System;
+﻿/*
+ * Author: Jose Mateus Raitz
+ * Class name: MarkarthMilk.cs
+ * Purpose: Class used to represent a MarkarthMilk
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace BleakwindBuffet.Data.Drinks
 {
-    class MarkarthMilk
+    public class MarkarthMilk
     {
         /// <summary>
         /// Gets the size of drink.

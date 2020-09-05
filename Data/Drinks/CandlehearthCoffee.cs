@@ -1,10 +1,15 @@
-﻿using System;
+﻿/*
+ * Author: Jose Mateus Raitz
+ * Class name: CandlehearthCoffee.cs
+ * Purpose: Class used to represent a Candlehearth Coffee
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace BleakwindBuffet.Data.Drinks
 {
-    class CandlehearthCoffee
+    public class CandlehearthCoffee
     {
         /// <summary>
         /// Gets the size of drink.

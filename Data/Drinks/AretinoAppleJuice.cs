@@ -1,10 +1,16 @@
-﻿using System;
+﻿/*
+ * Author: Jose Mateus Raitz
+ * Class name: ArentinoAppleJuice.cs
+ * Purpose: Class used to represent an Arentino Apple Juice
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace BleakwindBuffet.Data.Drinks
 {
-    class AretinoAppleJuice
+    public class AretinoAppleJuice
     {
         /// <summary>
         /// Gets the size of drink.
