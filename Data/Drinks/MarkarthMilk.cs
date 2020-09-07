@@ -55,7 +55,7 @@ namespace BleakwindBuffet.Data.Drinks
         }
 
         /// <summary>
-        /// Gets and set the calories of the drink.
+        /// Gets and sets the calories of the drink.
         /// </summary>
         public uint Calories
         {
@@ -89,8 +89,9 @@ namespace BleakwindBuffet.Data.Drinks
         }
 
         /// <summary>
-        /// Adds Special Instructions and returns a List with it.
+        /// Adds Special Instructions for the order according to it's parameters and returns a List with it.
         /// </summary>
+        /// /// <returns>A List whith the special instructions added</returns>
         public List<string> SpecialInstructions
         {
             get
@@ -106,7 +107,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// Overrides the default toString method.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>The name of the class on a string</returns>
         public override string ToString()
         {
             return Size + "Markarth Milk";

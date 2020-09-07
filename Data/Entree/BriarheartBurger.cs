@@ -13,44 +13,43 @@ namespace BleakwindBuffet.Data.Entree
     public class BriarheartBurger
     {
         
-        /// <summary>
-        /// Gets the price of the burger.
-        /// </summary>
-        public double Price
-        {
-            get => 6.32; 
-        }
+        /// <value>
+        /// Gets and sets the price of the burger.
+        /// </value>
+        public double Price => 6.32; 
+        
 
-        /// <summary>
-        /// Gets the calories of the burger.
-        /// </summary>
+        /// <value>
+        /// Gets and sets the calories of the burger.
+        /// </value>
         public uint Calories => 732;
 
-        /// <summary>
-        /// States wheter the burger has bun or not.
-        /// </summary>
+        /// <value>
+        /// Gets and sets wheter the burger has bun or not.
+        /// </value>
         public bool Bun { get; set; } = true;
-        /// <summary>
-        ///  States wheter the ketchup has bun or not.
-        /// </summary>
+        /// <value>
+        ///  Gets and sets wheter the burger has ketchup or not.
+        /// </value>
         public bool Ketchup { get; set; } = true;
-        /// <summary>
-        ///  States wheter the burger has mustard or not.
-        /// </summary>
+        /// <value>
+        ///  Gets and sets wheter the burger has mustard or not.
+        /// </value>
         public bool Mustard { get; set; } = true;
-        /// <summary>
-        ///  States wheter the burger has cheese or not.
-        /// </summary>
+        /// <value>
+        ///  Gets and sets wheter the burger has cheese or not.
+        /// </value>
         public bool Cheese { get; set; } = true;
 
-        /// <summary>
-        ///  States wheter the burger has pickles or not.
-        /// </summary>
+        /// <value>
+        ///  Gets and sets wheter the burger has pickles or not.
+        /// </value>
         public bool Pickle { get; set; } = true;
 
         /// <summary>
-        /// Adds Special Instructions and returns a List with it.
+        /// Adds Special Instructions for the order according to it's parameters and returns a List with it.
         /// </summary>
+        /// /// <returns>A List whith the special instructions added</returns>
         public List<string> SpecialInstructions
         {
             get
@@ -69,7 +68,7 @@ namespace BleakwindBuffet.Data.Entree
         /// <summary>
         /// Overrides the default toString method.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>The name of the class on a string</returns>
         public override string ToString()
         {
             return "Briarheart Burger";

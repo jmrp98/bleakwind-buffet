@@ -1,4 +1,7 @@
-﻿using System;
+﻿
+
+
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -7,7 +10,7 @@ namespace BleakwindBuffet.Data.Sides
     public class FriedMiraak
     {
         /// <summary>
-        /// Gets the size of drink.
+        /// Gets and sets the size of drink.
         /// </summary>
         public Enums.Size Size { set; get; } = Enums.Size.Small;
 
@@ -48,7 +51,7 @@ namespace BleakwindBuffet.Data.Sides
         }
 
         /// <summary>
-        /// Gets and set the calories of the side.
+        /// Gets and sets the calories of the side.
         /// </summary>
         public uint Calories
         {
@@ -84,8 +87,9 @@ namespace BleakwindBuffet.Data.Sides
 
 
         /// <summary>
-        /// Adds Special Instructions and returns a List with it.
+        /// Adds Special Instructions for the order according to it's parameters and returns a List with it.
         /// </summary>
+        /// /// <returns>A List whith the special instructions added</returns>
         public List<string> SpecialInstructions
         {
             get
@@ -96,10 +100,12 @@ namespace BleakwindBuffet.Data.Sides
                 return instructions;
             }
         }
+        
+        
         /// <summary>
         /// Overrides the default toString method.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>The name of the class on a string</returns>
         public override string ToString()
         {
             return Size + " Fried Miraak";

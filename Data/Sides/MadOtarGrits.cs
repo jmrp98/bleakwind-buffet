@@ -14,8 +14,9 @@ namespace BleakwindBuffet.Data.Sides
 
 
         /// <summary>
-        /// Gets and sets the price of the side.
+        /// Adds Special Instructions for the order according to it's parameters and returns a List with it.
         /// </summary>
+        /// /// <returns>A List whith the special instructions added</returns>
         public double Price
         {
 
@@ -83,8 +84,9 @@ namespace BleakwindBuffet.Data.Sides
 
 
         /// <summary>
-        /// Adds Special Instructions and returns a List with it.
+        /// Adds Special Instructions for the order according to it's parameters and returns a List with it.
         /// </summary>
+        /// /// <returns>A List whith the special instructions added</returns>
         public List<string> SpecialInstructions
         {
             get
@@ -97,7 +99,7 @@ namespace BleakwindBuffet.Data.Sides
         /// <summary>
         /// Overrides the default toString method.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>The name of the class on a string</returns>
         public override string ToString()
         {
             return Size + " Mad Otar Grids";

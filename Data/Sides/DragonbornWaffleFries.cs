@@ -1,4 +1,10 @@
-﻿using System;
+﻿/*
+ * Author: Jose Mateus Raitz
+ * Class name: DragonbornWaffles.cs
+ * Purpose: Class used to represent a Dragonborn Waffle
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -7,7 +13,7 @@ namespace BleakwindBuffet.Data.Sides
     public class DragonbornWaffleFries
     {
         /// <summary>
-        /// Gets the size of drink.
+        /// Gets and sets the size of drink.
         /// </summary>
         public Enums.Size Size { set; get; } = Enums.Size.Small;
 
@@ -82,8 +88,9 @@ namespace BleakwindBuffet.Data.Sides
         }
 
         /// <summary>
-        /// Adds Special Instructions and returns a List with it.
+        /// Adds Special Instructions for the order according to it's parameters and returns a List with it.
         /// </summary>
+        /// /// <returns>A List whith the special instructions added</returns>
         public List<string> SpecialInstructions
         {
             get
@@ -97,7 +104,7 @@ namespace BleakwindBuffet.Data.Sides
         /// <summary>
         /// Overrides the default toString method.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>The name of the class on a string</returns>
         public override string ToString()
         {
             return Size + " Dragonborn Waffle Fries";
