@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using BleakwindBuffet.Data.Enums;
 
 namespace BleakwindBuffet.Data.Sides
 {
@@ -9,7 +10,7 @@ namespace BleakwindBuffet.Data.Sides
         /// <summary>
         /// Gets the size of drink.
         /// </summary>
-        public Enums.Size Size { set; get; } = Enums.Size.Small;
+        public Size Size { set; get; } = Size.Small;
 
 
 
@@ -20,31 +21,28 @@ namespace BleakwindBuffet.Data.Sides
         public double Price
         {
 
-            set
+            get
             {
                 switch (Size)
                 {
-                    case Enums.Size.Small:
-                        Price = 1.22;
-                        break;
-
-                    case Enums.Size.Medium:
-                        Price = 1.58;
-                        break;
-
-                    case Enums.Size.Large:
-                        Price = 1.93;
-                        break;
+                    case Size.Small:
+                        return 1.22;
 
 
+                    case Size.Medium:
+                        return 1.58;
 
 
+                    case Size.Large:
+                        return 1.93;
 
+                    default:
+                        return 0;
 
                 }
             }
 
-            get => Price;
+
 
         }
 
@@ -54,31 +52,26 @@ namespace BleakwindBuffet.Data.Sides
         public uint Calories
         {
 
-            set
+            get
             {
                 switch (Size)
                 {
-                    case Enums.Size.Small:
-                        Calories = 105;
-                        break;
+                    case Size.Small:
+                        return 105;
+                        
 
-                    case Enums.Size.Medium:
-                        Calories = 142;
-                        break;
+                    case Size.Medium:
+                        return 142;
+                        
 
-                    case Enums.Size.Large:
-                        Calories = 179;
-                        break;
+                    case Size.Large:
+                        return 179;
 
-
-
-
-
+                    default:
+                        return 0;
 
                 }
             }
-
-            get => Calories;
 
         }
 
@@ -102,7 +95,7 @@ namespace BleakwindBuffet.Data.Sides
         /// <returns>The name of the class on a string</returns>
         public override string ToString()
         {
-            return Size + " Mad Otar Grids";
+            return Size + " Mad Otar Grits";
         }
     }
 }

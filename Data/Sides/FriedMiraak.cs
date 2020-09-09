@@ -4,7 +4,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-
+using BleakwindBuffet.Data.Enums;
 namespace BleakwindBuffet.Data.Sides
 {
     public class FriedMiraak
@@ -12,7 +12,7 @@ namespace BleakwindBuffet.Data.Sides
         /// <summary>
         /// Gets and sets the size of drink.
         /// </summary>
-        public Enums.Size Size { set; get; } = Enums.Size.Small;
+        public Size Size { set; get; } = Size.Small;
 
 
 
@@ -22,31 +22,27 @@ namespace BleakwindBuffet.Data.Sides
         public double Price
         {
 
-            set
+            get
             {
                 switch (Size)
                 {
-                    case Enums.Size.Small:
-                        Price = 178;
-                        break;
+                    case Size.Small:
+                        return 1.78;
+                       
 
-                    case Enums.Size.Medium:
-                        Price = 2.01;
-                        break;
+                    case Size.Medium:
+                        return 2.01;
+                        
 
-                    case Enums.Size.Large:
-                        Price = 2.88;
-                        break;
+                    case Size.Large:
+                        return 2.88;
 
-
-
-
-
-
+                    default:
+                        return 0;
                 }
             }
 
-            get => Price;
+            
 
         }
 
@@ -56,31 +52,27 @@ namespace BleakwindBuffet.Data.Sides
         public uint Calories
         {
 
-            set
+            get
             {
                 switch (Size)
                 {
                     case Enums.Size.Small:
-                        Calories = 151;
-                        break;
+                        return 151;
+                        
 
                     case Enums.Size.Medium:
-                        Calories = 236;
-                        break;
+                        return 236;
+                        
 
                     case Enums.Size.Large:
-                        Calories = 306;
-                        break;
+                        return 306;
 
-
-
-
-
+                    default:
+                        return 0;
+   
 
                 }
             }
-
-            get => Calories;
 
         }
 
@@ -108,7 +100,7 @@ namespace BleakwindBuffet.Data.Sides
         /// <returns>The name of the class on a string</returns>
         public override string ToString()
         {
-            return Size + " Fried Miraak";
+            return Size.ToString() + " Fried Miraak";
         }
     }
 }

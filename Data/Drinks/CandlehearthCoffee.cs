@@ -3,6 +3,7 @@
  * Class name: CandlehearthCoffee.cs
  * Purpose: Class used to represent a Candlehearth Coffee
  */
+using BleakwindBuffet.Data.Enums;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -14,7 +15,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// Gets the size of drink.
         /// </summary>
-        public Enums.Size Size { set; get; } = Enums.Size.Small;
+        public Size Size { set; get; } = Size.Small;
         /// <summary>
         /// Gets wheter the drink has ice or not.
         /// </summary>
@@ -35,31 +36,27 @@ namespace BleakwindBuffet.Data.Drinks
         public double Price
         {
 
-            set
+            get
             {
                 switch (Size)
                 {
-                    case Enums.Size.Small:
-                        Price = 0.75;
-                        break;
+                    case Size.Small:
+                        return 0.75;
+                        
 
-                    case Enums.Size.Medium:
-                        Price = 1.25;
-                        break;
+                    case Size.Medium:
+                        return 1.25;
+                        
 
-                    case Enums.Size.Large:
-                        Price = 1.75;
-                        break;
+                    case Size.Large:
+                        return 1.75;
 
-
-
-
-
-
+                    default:
+                        return 0;
                 }
             }
 
-            get => Price;
+            
 
         }
 
@@ -69,31 +66,26 @@ namespace BleakwindBuffet.Data.Drinks
         public uint Calories
         {
 
-            set
+            get
             {
                 switch (Size)
                 {
-                    case Enums.Size.Small:
-                        Calories = 7;
-                        break;
+                    case Size.Small:
+                        return 7;
+                        
 
-                    case Enums.Size.Medium:
-                        Calories = 10;
-                        break;
+                    case Size.Medium:
+                        return 10;
+                        
 
-                    case Enums.Size.Large:
-                        Calories = 20;
-                        break;
+                    case Size.Large:
+                        return 20;
 
-
-
-
-
-
+                    default:
+                        return 0;
                 }
             }
 
-            get => Calories;
 
         }
 
@@ -122,11 +114,11 @@ namespace BleakwindBuffet.Data.Drinks
         {
             string toString;
             if (!Decaf)
-                toString = "Candlerhearth Coffe";
+                toString = " Candlehearth Coffee";
             else
-                toString = "Decaf Candlehearth Coffe";
+                toString = " Decaf Candlehearth Coffee";
 
-            return toString + " " + Size;
+            return Size.ToString() + toString;
         }
 
     }

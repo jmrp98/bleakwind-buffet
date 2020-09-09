@@ -62,7 +62,7 @@ namespace BleakwindBuffet.Data.Entree
         /// <returns>The name of the class on a string</returns>
         public override string ToString()
         {
-            return "SmokeHouse Skeleton";
+            return "Smokehouse Skeleton";
         }
     }
 }

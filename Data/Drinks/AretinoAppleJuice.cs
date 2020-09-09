@@ -4,45 +4,48 @@
  * Purpose: Class used to represent an Arentino Apple Juice
  */
 
+using BleakwindBuffet.Data.Enums;
 using System;
 using System.Collections.Generic;
 using System.Text;
+
 
 namespace BleakwindBuffet.Data.Drinks
 {
     public class AretinoAppleJuice
     {
         /// <summary>
-        /// Gets the size of drink.
+        /// Gets and sets the size of drink.
         /// </summary>
-        public Enums.Size Size { set; get; } = Enums.Size.Small;
+        public Size Size { set; get; } = Size.Small; 
         /// <summary>
-        /// Gets wheter the drink has ice or not.
+        /// Gets/sets wheter the drink has ice or not.
         /// </summary>
         public bool Ice { get; set; } = false;
 
         /// <summary>
-        /// Gets and sets the price of the drink.
+        /// Gets/sets and sets the price of the drink.
         /// </summary>
         public double Price
         {
 
-            set
+            get
             {
                 switch (Size)
                 {
-                    case Enums.Size.Small:
-                        Price = 0.62;
-                        break;
+                    case Size.Small:
+                        return 0.62;
+                        
 
-                    case Enums.Size.Medium:
-                        Price = 0.87;
-                        break;
+                    case Size.Medium:
+                        return 0.87;
+                        
 
-                    case Enums.Size.Large:
-                        Price = 1.01;
-                        break;
+                    case Size.Large:
+                        return  1.01;
 
+                    default:
+                        return 123;
 
 
 
@@ -50,8 +53,6 @@ namespace BleakwindBuffet.Data.Drinks
 
                 }
             }
-
-            get => Price;
 
         }
 
@@ -61,21 +62,22 @@ namespace BleakwindBuffet.Data.Drinks
         public uint Calories
         {
 
-            set
+            get
             {
                 switch (Size)
                 {
-                    case Enums.Size.Small:
-                        Calories = 44;
-                        break;
+                    case Size.Small:
+                        return 44;
+                        
 
-                    case Enums.Size.Medium:
-                        Calories = 88;
-                        break;
+                    case Size.Medium:
+                        return  88;
+                        
+                    case Size.Large:
+                        return 132;
 
-                    case Enums.Size.Large:
-                        Calories = 132;
-                        break;
+                    default:
+                        return 123;
 
 
 
@@ -85,7 +87,7 @@ namespace BleakwindBuffet.Data.Drinks
                 }
             }
 
-            get => Calories;
+            
 
         }
 
@@ -111,7 +113,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <returns>The name of the class on a string</returns>
         public override string ToString()
         {
-            return Size + "Aretino Apple Juice";
+            return Size.ToString() + " Aretino Apple Juice";
         }
     }
 }

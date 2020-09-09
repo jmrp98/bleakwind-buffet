@@ -1,56 +1,55 @@
 ﻿/*
  * Author: Jose Mateus Raitz
  * Class name: MarkarthMilk.cs
- * Purpose: Class used to represent a MarkarthMilk
+ * Purpose: Class used to represent a Markarth Milk
  */
+
 using System;
 using System.Collections.Generic;
 using System.Text;
+using BleakwindBuffet.Data.Enums;
 
 namespace BleakwindBuffet.Data.Drinks
 {
     public class MarkarthMilk
     {
         /// <summary>
-        /// Gets the size of drink.
+        /// Gets/sets the size of drink.
         /// </summary>
-        public Enums.Size Size { set; get; } = Enums.Size.Small;
+        public Size Size { set; get; } = Size.Small;
         /// <summary>
-        /// Gets wheter the drink has ice or not.
+        /// Gets/sets wheter the drink has ice or not.
         /// </summary>
         public bool Ice { get; set; } = false;
 
         /// <summary>
-        /// Gets and sets the price of the drink.
+        /// Gets/sets and sets the price of the drink.
         /// </summary>
         public double Price
         {
 
-            set
+            get
             {
                 switch (Size)
                 {
-                    case Enums.Size.Small:
-                        Price = 1.05;
-                        break;
+                    case Size.Small:
+                        return 1.05;
+                        
 
-                    case Enums.Size.Medium:
-                        Price = 1.11;
-                        break;
+                    case Size.Medium:
+                        return 1.11;
+                        
 
-                    case Enums.Size.Large:
-                        Price = 1.22;
-                        break;
+                    case Size.Large:
+                        return 1.22;
 
-
-
-
-
+                    default:
+                        return 0;
 
                 }
             }
 
-            get => Price;
+            
 
         }
 
@@ -60,31 +59,26 @@ namespace BleakwindBuffet.Data.Drinks
         public uint Calories
         {
 
-            set
+            get
             {
                 switch (Size)
                 {
-                    case Enums.Size.Small:
-                        Calories = 56;
-                        break;
+                    case Size.Small:
+                        return 56;
+                       
 
-                    case Enums.Size.Medium:
-                        Calories = 72;
-                        break;
+                    case Size.Medium:
+                        return 72;
+                       
 
-                    case Enums.Size.Large:
-                        Calories = 93;
-                        break;
+                    case Size.Large:
+                        return 93;
 
-
-
-
-
-
+                    default:
+                        return 0;
+                        
                 }
             }
-
-            get => Calories;
 
         }
 
@@ -110,7 +104,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <returns>The name of the class on a string</returns>
         public override string ToString()
         {
-            return Size + "Markarth Milk";
+            return Size.ToString() + " Markarth Milk";
         }
     }
 }

@@ -93,7 +93,7 @@ namespace BleakwindBuffet.Data.Entree
         /// <returns>The name of the class on a string</returns>
         public override string ToString()
         {
-            return "ThalmorTriple";
+            return "Thalmor Triple";
         }
 
     }

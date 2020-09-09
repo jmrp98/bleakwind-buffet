@@ -6,6 +6,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using BleakwindBuffet.Data.Enums;
 
 namespace BleakwindBuffet.Data.Drinks
 {
@@ -14,7 +15,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// Gets the size of drink.
         /// </summary>
-        public Enums.Size Size { set; get; } = Enums.Size.Small;
+        public Size Size { set; get; } = Size.Small;
         /// <summary>
         /// Gets wheter the drink has ice or not.
         /// </summary>
@@ -57,7 +58,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <returns>The name of the class on a string</returns>
         public override string ToString()
         {
-            return Size + "Warrior Water";
+            return Size.ToString() + " Warrior Water";
         }
 
     }

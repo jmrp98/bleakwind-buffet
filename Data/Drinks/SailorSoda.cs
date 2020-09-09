@@ -4,62 +4,55 @@
  * Purpose: Class used to represent a Sailor Soda
  */
 
-using BleakwindBuffet.Data.Enums;
+
 
 using System;
 using System.Collections.Generic;
-using System.Drawing;
-using System.Dynamic;
-using System.Text;
-
+using BleakwindBuffet.Data.Enums;
 namespace BleakwindBuffet.Data.Drinks
 {
-    class SailorSoda
+    public class SailorSoda
     {
         /// <summary>
-        /// Gets the size of drink.
+        /// Gets/sets the size of drink.
         /// </summary>
-        public Enums.Size Size { set; get; } = Enums.Size.Small;
+        public Size Size { set; get; } = Size.Small;
         /// <summary>
-        /// Gets the flavor of the drink.
+        /// Gets/sets the flavor of the drink.
         /// </summary>
         public SodaFlavor Flavor { set; get; } = SodaFlavor.Cherry;
         /// <summary>
-        /// Gets wheter the drink has ice or not.
+        /// Gets/sets wheter the drink has ice or not.
         /// </summary>
         public bool Ice { get; set; } = true;
        
         /// <summary>
-        /// Gets and sets the price of the drink.
+        /// Gets/sets and sets the price of the drink.
         /// </summary>
         public double Price
         {
 
-            set
+            get
             {
                 switch(Size)
                 {
-                    case Enums.Size.Small:
-                        Price = 1.42;
-                        break;
+                    case Size.Small:
+                        return 1.42;
+                       
 
-                    case Enums.Size.Medium:
-                        Price = 1.73;
-                        break;
+                    case Size.Medium:
+                        return 1.74;
+                        
 
-                    case Enums.Size.Large:
-                        Price = 2.07;
-                        break;
+                    case Size.Large:
+                        return 2.07;
 
-
-
-
-
-
+                    default:
+                        return 0;
                 }
             }
 
-            get => Price ;
+            
             
         }
 
@@ -69,31 +62,26 @@ namespace BleakwindBuffet.Data.Drinks
         public uint Calories
         {
 
-            set
+            get
             {
                 switch (Size)
                 {
-                    case Enums.Size.Small:
-                        Calories = 117;
-                        break;
+                    case Size.Small:
+                        return 117;
+                        
 
-                    case Enums.Size.Medium:
-                        Calories = 153;
-                        break;
+                    case Size.Medium:
+                        return 153;
+                        
 
-                    case Enums.Size.Large:
-                        Calories = 205;
-                        break;
+                    case Size.Large:
+                        return 205;
 
-
-
-
-
+                    default:
+                        return 0;
 
                 }
             }
-
-            get => Calories;
 
         }
 
@@ -119,7 +107,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <returns>The name of the class on a string</returns>
         public override string ToString()
         {
-            return Size +" "+ Flavor+ " Sailor Soda";
+            return Size.ToString() +" "+ Flavor+ " Sailor Soda";
         }
     }
 }

@@ -8,7 +8,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace BlankwindBuffet.Data.Entree
+namespace BleakwindBuffet.Data.Entree
 {
    public class GardenOrcOmelette
     {
@@ -31,7 +31,7 @@ namespace BlankwindBuffet.Data.Entree
         /// <value>
         ///  States wheter the omelette has tomatoes or not.
         /// </value>
-        public bool Tomatoe { get; set; } = true;
+        public bool Tomato { get; set; } = true;
         /// <value>
         ///  States wheter the omelette has cheddar or not.
         /// </value>
@@ -49,8 +49,8 @@ namespace BlankwindBuffet.Data.Entree
                 List<string> instructions = new List<string>();
                 if (!Broccoli) instructions.Add("Hold broccoli");
                 if (!Mushrooms) instructions.Add("Hold mushrooms");
-                if (!Tomatoe) instructions.Add("Hold tomatoe");
-                if (!Cheddar) instructions.Add("Hold cheedar");
+                if (!Tomato) instructions.Add("Hold tomato");
+                if (!Cheddar) instructions.Add("Hold cheddar");
 
 
                 return instructions;
@@ -63,7 +63,7 @@ namespace BlankwindBuffet.Data.Entree
         /// <returns>The name of the class on a string</returns>
         public override string ToString()
         {
-            return "Garden Orc Omellete";
+            return "Garden Orc Omelette";
         }
 
     }

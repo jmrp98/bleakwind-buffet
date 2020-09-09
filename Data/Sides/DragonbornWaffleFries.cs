@@ -7,6 +7,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using BleakwindBuffet.Data.Enums;
 
 namespace BleakwindBuffet.Data.Sides
 {
@@ -25,65 +26,58 @@ namespace BleakwindBuffet.Data.Sides
         public double Price
         {
 
-            set
+            get
             {
                 switch (Size)
                 {
                     case Enums.Size.Small:
-                        Price = 0.42;
-                        break;
-
+                        return 0.42;
+                        
                     case Enums.Size.Medium:
-                        Price = 0.76;
-                        break;
+                        return 0.76;
+                        
 
                     case Enums.Size.Large:
-                        Price = 0.96;
-                        break;
+                        return 0.96;
 
-
-
-
-
-
+                    default:
+                        return 0;
                 }
             }
 
-            get => Price;
+            
 
         }
 
         /// <summary>
-        /// Gets and set the calories of the side.
+        /// Gets/sets and set the calories of the side.
         /// </summary>
         public uint Calories
         {
 
-            set
+            get
             {
                 switch (Size)
                 {
                     case Enums.Size.Small:
-                        Calories = 77;
-                        break;
+                        return 77;
+                        
 
                     case Enums.Size.Medium:
-                        Calories = 89;
-                        break;
+                        return 89;
+                        
 
                     case Enums.Size.Large:
-                        Calories = 100;
-                        break;
+                        return 100;
 
-
-
-
-
+                    default:
+                        return 0;
+                       
 
                 }
             }
 
-            get => Calories;
+            
 
         }
 
@@ -107,7 +101,7 @@ namespace BleakwindBuffet.Data.Sides
         /// <returns>The name of the class on a string</returns>
         public override string ToString()
         {
-            return Size + " Dragonborn Waffle Fries";
+            return Size.ToString() + " Dragonborn Waffle Fries";
         }
 
     }
