@@ -11,63 +11,55 @@ using BleakwindBuffet.Data.Enums;
 
 namespace BleakwindBuffet.Data.Sides
 {
-    public class DragonbornWaffleFries
+    public class DragonbornWaffleFries : Side
     {
-        /// <summary>
-        /// Gets and sets the size of drink.
-        /// </summary>
-        public Enums.Size Size { set; get; } = Enums.Size.Small;
-
-
+        
 
         /// <summary>
         /// Gets and sets the price of the side.
         /// </summary>
-        public double Price
+        public override double Price
         {
 
             get
             {
                 switch (Size)
                 {
-                    case Enums.Size.Small:
+                    case Size.Small:
                         return 0.42;
                         
-                    case Enums.Size.Medium:
+                    case Size.Medium:
                         return 0.76;
                         
 
-                    case Enums.Size.Large:
+                    case Size.Large:
                         return 0.96;
 
                     default:
                         return 0;
                 }
             }
-
-            
-
         }
 
         /// <summary>
         /// Gets/sets and set the calories of the side.
         /// </summary>
-        public uint Calories
+        public override uint Calories
         {
 
             get
             {
                 switch (Size)
                 {
-                    case Enums.Size.Small:
+                    case Size.Small:
                         return 77;
                         
 
-                    case Enums.Size.Medium:
+                    case Size.Medium:
                         return 89;
                         
 
-                    case Enums.Size.Large:
+                    case Size.Large:
                         return 100;
 
                     default:
@@ -77,15 +69,13 @@ namespace BleakwindBuffet.Data.Sides
                 }
             }
 
-            
-
         }
 
         /// <summary>
         /// Adds Special Instructions for the order according to it's parameters and returns a List with it.
         /// </summary>
         /// /// <returns>A List whith the special instructions added</returns>
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {

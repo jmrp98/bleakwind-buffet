@@ -1,4 +1,5 @@
-﻿using BleakwindBuffet.Data.Drinks;
+﻿using BleakwindBuffet.Data;
+using BleakwindBuffet.Data.Drinks;
 using BleakwindBuffet.Data.Enums;
 using System;
 using System.Collections.Generic;
@@ -10,6 +11,20 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
 {
     public class WarriorWaterTest
     {
+       [Fact]
+        public void ShouldBeADrink()
+        {
+            WarriorWater ww = new WarriorWater();
+            Assert.IsAssignableFrom<Drink>(ww);
+        }
+
+        [Fact]
+        public void ShouldBeIOrderItem()
+        {
+            WarriorWater ww = new WarriorWater();
+            Assert.IsAssignableFrom<IOrderItem>(ww);
+        }
+
         [Fact]
         public void ShouldIncludeIceByDefault()
         {

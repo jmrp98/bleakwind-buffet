@@ -9,21 +9,21 @@ using System.Text;
 
 namespace BleakwindBuffet.Data.Entree
 {
-    public class SmokehouseSkeleton
+    public class SmokehouseSkeleton : Entree
     {
         /// <value>
         /// Gets and sets the price of the breakfast combo.
         /// </value>
-        public double Price => 5.62;
+        public override double Price => 5.62;
 
         /// <value>
         /// Gets and sets the calories  of the breakfast combo.
         /// </value>
-        public uint Calories => 602;
+        public override uint Calories => 602;
         /// <value>
         /// States wheter the breakfast combo has sausage link or not.
         /// </value>
-        public bool SausageLink { get; set; } = true;
+        public bool SausageLink { get; set;} = true;
         /// <value>
         /// States wheter the breakfast combo has hash browns or not.
         /// </value>
@@ -41,7 +41,7 @@ namespace BleakwindBuffet.Data.Entree
         /// Adds Special Instructions for the order according to it's parameters and returns a List with it.
         /// </summary>
         /// /// <returns>A List whith the special instructions added</returns>
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {

@@ -6,11 +6,26 @@
 using Xunit;
 
 using BleakwindBuffet.Data.Entree;
+using BleakwindBuffet.Data;
 
 namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
 {
     public class ThugsTBoneTests
     {
+        [Fact]
+        public void ShouldBeEntree()
+        {
+            ThugsTBone tt = new ThugsTBone();
+            Assert.IsAssignableFrom<Entree>(tt);
+        }
+
+        [Fact]
+        public void ShouldBeIOrderItem()
+        {
+            ThugsTBone tt = new ThugsTBone();
+            Assert.IsAssignableFrom<IOrderItem>(tt);
+        }
+
         [Fact]
         public void ShouldReturnCorrectPrice()
         {

@@ -1,25 +1,21 @@
-﻿
-
-
+﻿/*
+ * Author: Jose Mateus Raitz
+ * Class name: FriedMiraak.cs
+ * Purpose: Class used to represent a Fried Miraak.
+ */
 using System;
 using System.Collections.Generic;
 using System.Text;
 using BleakwindBuffet.Data.Enums;
 namespace BleakwindBuffet.Data.Sides
 {
-    public class FriedMiraak
+    public class FriedMiraak : Side
     {
-        /// <summary>
-        /// Gets and sets the size of drink.
-        /// </summary>
-        public Size Size { set; get; } = Size.Small;
-
-
-
+        
         /// <summary>
         /// Gets and sets the price of the side.
         /// </summary>
-        public double Price
+        public override double Price
         {
 
             get
@@ -49,27 +45,27 @@ namespace BleakwindBuffet.Data.Sides
         /// <summary>
         /// Gets and sets the calories of the side.
         /// </summary>
-        public uint Calories
+        public override uint Calories
         {
 
             get
             {
                 switch (Size)
                 {
-                    case Enums.Size.Small:
+                    case Size.Small:
                         return 151;
-                        
 
-                    case Enums.Size.Medium:
+
+                    case Size.Medium:
                         return 236;
-                        
 
-                    case Enums.Size.Large:
+
+                    case Size.Large:
                         return 306;
 
                     default:
                         return 0;
-   
+
 
                 }
             }
@@ -82,7 +78,7 @@ namespace BleakwindBuffet.Data.Sides
         /// Adds Special Instructions for the order according to it's parameters and returns a List with it.
         /// </summary>
         /// /// <returns>A List whith the special instructions added</returns>
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {

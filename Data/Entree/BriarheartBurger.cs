@@ -10,19 +10,19 @@ using System.Text;
 
 namespace BleakwindBuffet.Data.Entree
 {
-    public class BriarheartBurger
+    public class BriarheartBurger :Entree
     {
         
         /// <value>
         /// Gets and sets the price of the burger.
         /// </value>
-        public double Price => 6.32; 
+        public override double Price => 6.32; 
         
 
         /// <value>
         /// Gets and sets the calories of the burger.
         /// </value>
-        public uint Calories => 732;
+        public override uint Calories => 732;
 
         /// <value>
         /// Gets and sets wheter the burger has bun or not.
@@ -50,7 +50,7 @@ namespace BleakwindBuffet.Data.Entree
         /// Adds Special Instructions for the order according to it's parameters and returns a List with it.
         /// </summary>
         /// /// <returns>A List whith the special instructions added</returns>
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {

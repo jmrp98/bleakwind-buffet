@@ -1,24 +1,22 @@
-﻿using System;
+﻿/*
+ * Author: Jose Mateus Raitz
+ * Class name: MadOtarGrits.cs
+ * Purpose: Class used to represent a Mad Otar Grits.
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 using BleakwindBuffet.Data.Enums;
 
 namespace BleakwindBuffet.Data.Sides
 {
-    public class MadOtarGrits
+    public class MadOtarGrits : Side
     {
-        /// <summary>
-        /// Gets the size of drink.
-        /// </summary>
-        public Size Size { set; get; } = Size.Small;
-
-
 
         /// <summary>
-        /// Adds Special Instructions for the order according to it's parameters and returns a List with it.
+        /// Gets and sets the price of the side.
         /// </summary>
-        /// /// <returns>A List whith the special instructions added</returns>
-        public double Price
+        public override double Price
         {
 
             get
@@ -42,14 +40,12 @@ namespace BleakwindBuffet.Data.Sides
                 }
             }
 
-
-
         }
 
         /// <summary>
         /// Gets and set the calories of the side.
         /// </summary>
-        public uint Calories
+        public override uint Calories
         {
 
             get
@@ -80,7 +76,7 @@ namespace BleakwindBuffet.Data.Sides
         /// Adds Special Instructions for the order according to it's parameters and returns a List with it.
         /// </summary>
         /// /// <returns>A List whith the special instructions added</returns>
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {

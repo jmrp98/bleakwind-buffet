@@ -9,23 +9,23 @@ using System.Text;
 
 namespace BleakwindBuffet.Data.Entree
 {
-    public class ThugsTBone
+    public class ThugsTBone : Entree
     {
         /// <value>
         /// Gets and sets the price of the T-Bone.
         /// </value>
-        public double Price => 6.44;
+        public override double Price => 6.44;
         /// <value>
         /// Gets and sets the calories of the T-Bone.
         /// </value>
-        public uint Calories => 982;
+        public override uint Calories => 982;
 
 
         /// <summary>
         /// Adds Special Instructions for the order according to it's parameters and returns a List with it.
         /// </summary>
         /// /// <returns>A List whith the special instructions added</returns>
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {

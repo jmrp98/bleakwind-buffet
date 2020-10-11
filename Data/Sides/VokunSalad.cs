@@ -1,23 +1,23 @@
-﻿using System;
+﻿/*
+ * Author: Jose Mateus Raitz
+ * Class name: VokunSalad.cs
+ * Purpose: Class used to represent a Vokun Salad.
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Text;
 using BleakwindBuffet.Data.Enums;
 
 namespace BleakwindBuffet.Data.Sides
 {
-    public class VokunSalad
+    public class VokunSalad : Side
     {
-        /// <summary>
-        /// Gets and sets the size of drink.
-        /// </summary>
-        public Size Size { set; get; } =Size.Small;
-        
  
-
         /// <summary>
         /// Gets and sets the price of the side.
         /// </summary>
-        public double Price
+        public override double Price
         {
 
             get
@@ -48,7 +48,7 @@ namespace BleakwindBuffet.Data.Sides
         /// <summary>
         /// Gets and sets the calories of the side.
         /// </summary>
-        public uint Calories
+        public override uint Calories
         {
 
             get
@@ -80,7 +80,7 @@ namespace BleakwindBuffet.Data.Sides
         /// Adds Special Instructions for the order according to it's parameters and returns a List with it.
         /// </summary>
         /// /// <returns>A List whith the special instructions added</returns>
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {
